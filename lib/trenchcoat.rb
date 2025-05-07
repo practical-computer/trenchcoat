@@ -8,9 +8,9 @@ module Trenchcoat
   module Model
     extend ActiveSupport::Concern
 
-    def fallback_to_model_values(model:, attributes:)
-      attributes.each do |attribute|
-        next if send(attribute)
+    def fallback_to_model_values(model:, attributes_to_check:, original_attributes_hash:)
+      attributes_to_check.each do |attribute|
+        next if original_attributes_hash.with_indifferent_access.key?(attribute)
 
         send(:"#{attribute}=", model.public_send(attribute))
       end
@@ -22,7 +22,7 @@ module Trenchcoat
 
         attributes.each do |attribute_name|
           column = columns.fetch(attribute_name)
-          attribute column.name, column.type, default: column.default
+          attribute column.name, model_class.type_for_attribute(attribute_name), default: column.default
         end
       end
 
