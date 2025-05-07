@@ -18,10 +18,9 @@ class TestTrenchcoat
 
       attr_accessor :post
 
-      copy_attribute_definitions(model_class: Post, attributes: %i[title published_at])
+      copy_attribute_definitions(model_class: Post, attributes: %i[title body published_at])
       quack_like(model_instance_attr: :post)
 
-      attribute :body, :string # has to be manually defined because there is not a Text type for ActiveModel by default
       attribute :is_published, :boolean, default: false
       alias is_published? is_published
 

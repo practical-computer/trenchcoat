@@ -22,7 +22,7 @@ module Trenchcoat
 
         attributes.each do |attribute_name|
           column = columns.fetch(attribute_name)
-          attribute column.name, column.type, default: column.default
+          attribute column.name, model_class.type_for_attribute(attribute_name), default: column.default
         end
       end
 
