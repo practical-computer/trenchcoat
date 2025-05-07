@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    trenchcoat (0.1.0)
+    trenchcoat (0.2.0)
       activemodel (>= 7.0)
       activerecord (>= 7.0)
       activesupport (>= 7.0)
