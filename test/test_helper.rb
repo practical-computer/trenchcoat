@@ -10,7 +10,7 @@ ActiveRecord::Base.establish_connection(adapter: "sqlite3", database: ":memory:"
 ActiveRecord::Schema.define do
   create_table :posts do |t|
     t.string :title, null: false
-    t.text :body, null: false
+    t.text :body, null: false, default: "It was a dark and stormy night"
     t.datetime :published_at
   end
 end
