@@ -111,6 +111,23 @@ class TestTrenchcoat
       assert_equal true, form.is_published
     end
 
+    test "fallback_to_model_values: given ActionController::Parameters" do
+      time = Time.utc(2021, 2, 2)
+      post = Post.create!(title: "A Post", body: "Post Content")
+
+      parameters = ActionController::Parameters.new(title: "Hello", published_at: time, is_published: "1").permit(
+        :title, :body, :published_at
+      ).merge(post: post)
+
+      form = CustomForm.new(parameters)
+
+      assert_equal post, form.post
+      assert_equal "Hello", form.title
+      assert_equal "Post Content", form.body
+      assert_equal time, form.published_at
+      assert_equal true, form.is_published
+    end
+
     test "creating a new record, updating" do
       form = CustomForm.new
       form.title = SecureRandom.hex
