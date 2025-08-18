@@ -13,3 +13,5 @@ gem "rubocop", "~> 1.21"
 
 gem "debug"
 gem "sqlite3"
+
+gem "actionpack"
