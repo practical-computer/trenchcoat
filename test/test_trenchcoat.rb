@@ -177,6 +177,7 @@ class TestTrenchcoat
 
       assert_equal Post.model_name, form.model_name
       assert_equal false, form.persisted?
+      assert_equal true, form.new_record?
       assert_nil form.id
     end
 
@@ -185,6 +186,7 @@ class TestTrenchcoat
 
       assert_equal Post.model_name, form.model_name
       assert_equal false, form.persisted?
+      assert_equal true, form.new_record?
       assert_nil form.id
     end
 
@@ -194,6 +196,7 @@ class TestTrenchcoat
 
       assert_equal Post.model_name, form.model_name
       assert_equal true, form.persisted?
+      assert_equal false, form.new_record?
       assert_equal post.id, form.id
     end
   end

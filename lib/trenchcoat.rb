@@ -28,7 +28,7 @@ module Trenchcoat
       end
 
       def quack_like(model_instance_attr:)
-        delegate :model_name, :persisted?, :id, to: model_instance_attr
+        delegate :model_name, :persisted?, :new_record?, :id, to: model_instance_attr
       end
     end
   end
