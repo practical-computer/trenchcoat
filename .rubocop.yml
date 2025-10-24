@@ -10,3 +10,6 @@ Style/StringLiteralsInInterpolation:
 Layout/LineLength:
   Exclude:
     - test/**/*
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*
