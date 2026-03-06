@@ -15,3 +15,4 @@ gem "debug"
 gem "sqlite3"
 
 gem "actionpack"
+gem "dotenv", require: "dotenv/load"
