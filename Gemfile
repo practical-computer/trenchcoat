@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source "https://gem.coop"
 
 # Specify your gem's dependencies in trenchcoat.gemspec
 gemspec
@@ -15,3 +15,4 @@ gem "debug"
 gem "sqlite3"
 
 gem "actionpack"
+gem "dotenv", require: "dotenv/load"

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "dotenv/load"
 require "bundler/gem_tasks"
 require "minitest/test_task"
 

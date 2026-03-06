@@ -4,11 +4,11 @@
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add trenchcoat
+    $ bundle add trenchcoat --source "https://beta.gem.coop/@practical-computer"
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install trenchcoat
+    $ gem "trenchcoat", source: "https://beta.gem.coop/@practical-computer"
 
 ## Usage
 
