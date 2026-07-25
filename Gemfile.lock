@@ -59,7 +59,7 @@ GEM
       reline (>= 0.3.8)
     dotenv (3.2.0)
     drb (2.2.3)
-    erb (6.0.2)
+    erb (6.0.4)
     erubi (1.13.1)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
